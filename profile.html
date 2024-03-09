@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            margin-bottom: 20px;
+        }
+        .profile-info label {
+            font-weight: bold;
+        }
+        .profile-info input[type="text"],
+        .profile-info input[type="email"],
+        .profile-info select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .buttons button.logout {
+            background-color: #f44336;
+        }
+        .profile-photo {
+    width: 150px; /* Initial width */
+    height: 150px; /* Initial height */
+    border-radius: 50%; /* To make it round */
+    overflow: hidden;
+    margin: 0 auto; /* Center the profile picture horizontally */
+}
+
+.profile-photo img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Keep it round */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-photo">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.VIplnCsGqHdRbTyZj1sJOQHaHa&pid=Api&P=0&h=180.jpg" alt="Profile Picture">
+        </div>
+        
+        <h1>User Profile</h1>
+        <div class="profile-info">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="cno">CNO (Customer Number):</label>
+            <input type="text" id="cno" name="cno">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="buttons">
+            <button onclick="changePassword()">Change Password</button>
+            <button onclick="editProfile()">Edit Profile</button>
+            <button class="logout">Log Out</button>
+            <button onclick="changeAccount()">Change Account</button>
+        </div>
+    </div>
+</body>
+</html>

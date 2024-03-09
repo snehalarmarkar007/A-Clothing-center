@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A+ Clothing Center</title>
+    <link rel="stylesheet" href="cloth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 260%;
+      background: url("http://s1.bwallpapers.com/thumbs2/2014/03/04/light-pink_112400223.jpg" ); /* Replace 'your-background-image.png' with the path to your background image */
+      z-index: -1; /* Send the background image to the back */
+      }
+.filters {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.filter-button {
+    background-color: rgba(190, 39, 112, 0.955);
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 15px; /* Adjust the border-radius for cut corners */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-button.active {
+    background-color:#5f1036f4;
+    color: white;
+}
+.filter-button:hover {
+    transform: scale(1.1);
+}
+
+.clothing-section {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;   
+}
+.products-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 100px;
+    z-index: 3;
+}
+
+.product-card {
+    width: 245px;
+    height: 325px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    background-color:rgb(18, 18, 18); 
+        
+}
+
+.product-card img {
+    width: 100%;
+    height: 195px; /* Adjust the height as needed */
+    object-fit:auto; /* Maintain aspect ratio and cover the entire container */
+
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    font-weight: bold;
+    color: rgb(14, 160, 14);
+}
+.photo-collage {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10%; /* Adjust the margins as needed */
+}
+
+.collage-image {
+    width: 30%; /* Adjust the width as needed */
+    border-radius: 10px; /* Adds rounded corners to images */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Adds a zoom effect on hover */
+}
+
+.collage-image:hover {
+    transform: scale(1.1);
+}
+
+h3{
+    color: white;
+}
+.icon {
+    font-size: 1.4rem; /* You can adjust the font size as needed */
+     /* Align icons to the right */
+   display:flex;
+   
+   top:5px;
+  }
+  
+  .icon i {
+     /* Adjust spacing between icons */
+    color: white; /* Set default color for icons */
+    
+ }
+  
+  .fa-solid.fa-heart {
+    color: red;
+    
+   
+  }
+
+  .fa-cart-shopping {
+    color: white; /* You can change the color of the cart icon */
+  }
+  h4 {
+    font-size: 30px; /* Adjust the font size as needed */
+    font-weight: 1000; 
+    text-align: center;
+    margin: 10px 0; /* Adjust the margin as needed */
+    color: #5f1036f4;; /* Adjust the color as needed */
+    font-family:  montserrat; /* Use your preferred font */
+}
+.footer {
+    background-color: rgba(161, 12, 84, 0.823);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+
+}
+
+</style>
+<body>
+    <div class="background"></div>
+        <!-- Navbar -->
+           <nav class="navbar">
+            
+            <header>
+                
+               <div class="background-image">
+                <img src="https://1.bp.blogspot.com/-McBg5-CqUlM/Xc3afNaC7VI/AAAAAAAB-Zg/CnIbjY0FI2EGIhA5Dvs59Nm_B7-dYM6hQCLcBGAsYHQ/s1600/soft-pink-flower-a.png"  class="logo">
+                 
+                 </div>
+            </header>
+            <div class="container">
+                <h1>A+ Clothing Center</h1>    
+                
+                <div class="nav-links">
+                       
+                    <a href="#home">Home</a>
+                
+                    <div class="dropdown">
+                        <a href="#">Products</a>
+                        <div class="dropdown-content">
+                            <a href="Men.html">Men</a>
+                            <a href="women.html">Women</a>
+                            <a href="kids.html">kids</a>
+                        </div>
+                    </div>
+                    <a href="#aboutus">About Us</a>
+                    <a href="#contactus">Contact Us</a>
+                    <header>
+                    <div class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                       <a href="fav.html"><i class="fa-regular fa-heart"></i></a>
+                      <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                      <div class="dropdown">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <div class="dropdown-content">
+                            <a href="profile.html">Profile</a>
+                            <a href="privcy.html">Privacy</a>
+                        </div>
+                    </div>
+                    </header>
+                </div>
+                    
+        </nav></br></br>
+        
+    <div class="photo-collage">
+        <img src="men.png" alt="Collage Image 1" class="collage-image">
+        <img src="https://images01.nicepage.com/page/10/99/website-template-preview-109962.jpg" alt="Collage Image 2" class="collage-image">
+        <img src="men2.png" alt="Collage Image 3" class="collage-image">
+        
+    </div>
+
+    <div class="filters">
+        
+        Filters <button class="filter-button active" data-category="all">All</button>
+        <button class="filter-button" data-category="T-shirt"onclick="scrollToSection('T-shirt-section')">T-shirt</button>
+        <button class="filter-button" data-category="Shirt"onclick="scrollToSection('Shirt-section')">Shirt</button>
+        <button class="filter-button" data-category="Pants"onclick="scrollToSection('Pants-section')">Pants</button>
+        <button class="filter-button" data-category="trouser">Trouser</button>
+        <button class="filter-button" data-category="dress">Dress</button>
+    </div></br>
+      <h4>T-Shirts</h4>
+    <div class="clothing-section" id="T-shirt-section">
+        
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="T-shirt">
+                <img src="https://i.pinimg.com/originals/24/4e/72/244e72b98cce17bf281b40a02c3f3f0e.jpg" alt="T-Shirt 1">
+                <h3>T-Shirt </h3>
+                <p class="price"> Rs 200.00/-</p>
+                <div class="icon">
+                    
+                   <li><a href="bill.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </div>
+                
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="Tshirt">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.dimdMEURk7UewcEsCmqGDQHaLO&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>T-Shirt </h3>
+                <p class="price"> Rs 200.00/-</p>
+                <div class="icon">
+                    
+                    <li><a href="bill.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                
+                
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="Tshirt">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.smG6C4-n7ERIFbtVLzTI7AHaLy&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>T-Shirt </h3>
+                <p class="price">Rs 450.00/-</p>
+                <div class="icon">
+                    
+                    <li><a href="bill.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://i.pinimg.com/originals/3d/6c/ee/3d6cee5c87a1893eafa9cc73cc1976b5.jpg" alt="T-Shirt 1">
+                <h3>T-Shirt </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <li><a href="bill.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://i.pinimg.com/originals/c1/f7/75/c1f77582678c416159668c84a0540f05.jpg" alt="T-Shirt 1">
+                <h3>T-Shirt </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <li><a href="bill.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- T-shirts will be dynamically added here using JavaScript -->
+    </div></br>
+    <h4>Shirts</h4>
+    <div class="clothing-section" id="Shirt-section">
+        
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="Shirt">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.frGsjZetC0OLzDcu0Cp-sQHaJB&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Shirt </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="Shirt">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.9LFg7X8BgEYWqJdIpvlTCwHaJ3&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Shirt </h3>
+                <p class="price">Rs 20.00/-</p>
+
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.4Gg91OenxtQy-RZL14XGXgHaJ3&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Shirt </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.YfW4KehLsJDPPwBmCQOYZwHaFt&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Shirt </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.hukPq4Qd01I5as3w8vQgywHaJd&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Shirt </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- T-shirts will be dynamically added here using JavaScript -->
+    </div></br>
+    <h4>Pants</h4>
+    <div class="clothing-section" id="Pants-section">
+        
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="Pants">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.fyRnCGX91VmBqff5sG--7gHaHa&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Pants </h3>
+                <p class="price">Rs 20.00/-</p>
+
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.mfQ2_KBDTeyq39tD86qBHQHaLH&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Pants</h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.fyRnCGX91VmBqff5sG--7gHaHa&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Pants </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.VOWqWA6wCaKxc6_7r4BEIgHaHa&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Pants </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <!-- Repeat for other T-shirts and different categories -->
+        </div>
+        <div class="products-container">
+            <!-- Sample T-shirt cards, repeat as needed -->
+            <div class="product-card" data-category="tshirt">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.IFlrGIFNUbg-Q37_tccdrgHaLH&pid=Api&P=0&h=180.jpg" alt="T-Shirt 1">
+                <h3>Pants </h3>
+                <p class="price">Rs 20.00/-</p>
+                <div class="icon">
+                    
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+    
+        </div>
+
+        <!-- T-shirts will be dynamically added here using JavaScript -->
+    </div>
+    
+    <script src="script.js"></script>
+   </br> </br>  </br>  </br>    <footer class="footer">
+        <div class="container">
+            
+            <p>&copy; 2024 A+ Clothing Center. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</html>
